@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyss</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pad-mar">
+
+    <nav>
+        <div class="navbar">
+            <div class="navbar-container inline">
+
+                <div class="open-side-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="30" hight="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" onclick="openSideBar()" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+
+                <div class="logo"> 
+                    <img src="pictures/logo.14d0e71d.svg" alt="logo" width="140" height="40">
+                </div>
+
+                <div class="nav-items-div inline">
+                    <ul class="nav-items inline pad-mar">
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Woman</a></li>
+                        <li><a href="#">Beauty</a></li>
+                        <li><a href="#">Sport</a></li>
+                        <li><a href="#">collection</a></li>
+                    </ul>
+                </div>
+
+                <div class="search-bar">
+
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" hight="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 search-bar-icon pad-mar">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </div>
+                      
+                    <input type="search" id="search" placeholder="Type And Press Enter" style="height: 28px;" >
+
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" hight="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 search-bar-close-icon" onclick="closeSearch()">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                      
+                </div>
+
+                <ul class="nav-content inline pad-mar">
+
+                    <ul class="nav-search-place inline" >
+                        <li onclick="navSearch()">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.5-5.5" />
+                                <circle cx="10.5" cy="10.5" r="7.5" />
+                            </svg>
+                        </li>
+                    </ul>
+
+                    <li class="nav-account" onClick="miniAccount()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </li>                    
+
+                    <li class="nav-card" onclick="miniCard()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+                    </li>
+
+                </ul>
+                
+                <div class="mini-account">
+                    <div class="mini-account-container">
+
+                        <div class="person-mini-info inline">
+                            <div class="person-pic">
+                                <img src="pictures/pic/person.png.jpg" width="48" height="48" alt="person-pic">
+                            </div>
+                            <div class="person-name-place">
+                                <h4 class="person-name pad-mar">Aryan Shams</h4>
+                                <p class="person-place">Los Angeles, CA</p>
+                            </div>
+                        </div>
+
+                        <div class="account-icon-inner">
+                            
+                            <a href="#" class="inline">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>                                  
+                                <p>My Account</p>
+                            </a>
+
+                            <a href="#" class="inline">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                </svg>
+                                <p>My Order</p>
+                            </a>
+
+                            <a href="#" class="inline">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <p>Wishlist</p>
+                            </a>
+
+                        </div>
+
+                        <div class="account-icon-inner">
+                            
+                            <a href="#" class="inline">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                                </svg>                                
+                                <p>Dark theme</p>
+                            </a>
+
+                            <a href="#" class="inline">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                                </svg>
+                                <p>help</p>
+                            </a>
+
+                            <a href="#" class="inline">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                                </svg>                                  
+                                <p>Log out</p>
+                            </a>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="mini-card">
+                    <div class="mini-card-container">
+
+                        <h3 class="mi-ca-title pad-mar">Shopping cart</h3>
+
+                        <div class="mi-ca-product">
+
+                            <div class="mi-ca-product-cards">
+
+                                <div>
+                                    <a href="#" class="m-c-product-photo">
+                                        <img src="pictures/pic/17.webp" alt="pic">
+                                    </a>
+                                </div>
+    
+                                <div class="m-c-product-details">
+
+                                    <div class="m-c-product-details-container">
+
+                                        <div class="m-c-product-info">
+
+                                            <h3 class="pad-mar"><a href="#">Rey Nylon Backpack</a></h3>
+    
+                                            <p class="pad-mar">
+                                                <span class="m-c-product-matrial">Natural <span class="m-c-product-line"></span> <span class="m-c-product-size">XL</span> </span>
+                                            </p>
+                                        </div>
+                            
+                                        <div class=" m-c-product-price">
+                                            <span>$74</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="m-c-product-num-del">
+                                        <p>PN <span class="m-c-product-number">1</span></p>
+                                        <button type="button" class="m-c-product-remove-btn">Remove</button>
+                                    </div>
+    
+                                </div>
+    
+    
+                            </div>
+
+                            <div class="mi-ca-product-cards">
+
+                                <div>
+                                    <a href="#" class="m-c-product-photo">
+                                        <img src="pictures/pic/17.webp" alt="pic">
+                                    </a>
+                                </div>
+    
+                                <div class="m-c-product-details">
+
+                                    <div class="m-c-product-details-container">
+
+                                        <div class="m-c-product-info">
+
+                                            <h3 class="pad-mar"><a href="#">Rey Nylon Backpack</a></h3>
+    
+                                            <p class="pad-mar">
+                                                <span class="m-c-product-matrial">Natural <span class="m-c-product-line"></span> <span class="m-c-product-size">XL</span> </span>
+                                            </p>
+                                        </div>
+                            
+                                        <div class=" m-c-product-price">
+                                            <span>$74</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="m-c-product-num-del">
+                                        <p>PN <span class="m-c-product-number">1</span></p>
+                                        <button type="button" class="m-c-product-remove-btn">Remove</button>
+                                    </div>
+    
+                                </div>
+    
+    
+                            </div>
+
+                            <div class="mi-ca-product-cards">
+
+                                <div>
+                                    <a href="#" class="m-c-product-photo">
+                                        <img src="pictures/pic/17.webp" alt="pic">
+                                    </a>
+                                </div>
+    
+                                <div class="m-c-product-details">
+
+                                    <div class="m-c-product-details-container">
+
+                                        <div class="m-c-product-info">
+
+                                            <h3 class="pad-mar"><a href="#">Rey Nylon Backpack</a></h3>
+    
+                                            <p class="pad-mar">
+                                                <span class="m-c-product-matrial">Natural <span class="m-c-product-line"></span> <span class="m-c-product-size">XL</span> </span>
+                                            </p>
+                                        </div>
+                            
+                                        <div class=" m-c-product-price">
+                                            <span>$74</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="m-c-product-num-del">
+                                        <p>PN <span class="m-c-product-number">1</span></p>
+                                        <button type="button" class="m-c-product-remove-btn">Remove</button>
+                                    </div>
+    
+                                </div>
+    
+    
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="check-link-sec">
+                        <div>
+                            <div class="c-l-txt-total">
+                                <span>
+                                    <span class="c-l-title">Subtotal</span><br>
+                                    <span class="c-l-text">Shipping and taxes calculated at checkout.</span>
+                                </span>
+                                <span class="c-l-total">$299.00</span>
+                            </div>
+                            <div class="cart-check-button">
+                                <a href="#" class="cart-link">View cart</a>
+                                <a href="#" class="check-out-link">Check out</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar">
+
+            <div class="side-bar-container">
+
+                <div class="close-side-bar" onclick="closeSideBar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="25" hight="25" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                      </svg>                          
+                </div>
+    
+                <div class="s-b-light">
+                    <img src="pictures/logo.14d0e71d.svg" alt="logo" width="140" height="40">
+                </div>
+    
+                <div class="s-b-txt">
+                    <span>Discover the most outstanding articles on all topics of life. Write your stories and share them</span>
+                </div>
+    
+                <div class="s-b-social-light">
+    
+                    <div class="s-b-social inline">
+    
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0,0,256,256" class="facebook-link">
+                                <g fill="#1877f2" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,3c-12.15,0 -22,9.85 -22,22c0,11.03 8.125,20.137 18.712,21.728v-15.897h-5.443v-5.783h5.443v-3.848c0,-6.371 3.104,-9.168 8.399,-9.168c2.536,0 3.877,0.188 4.512,0.274v5.048h-3.612c-2.248,0 -3.033,2.131 -3.033,4.533v3.161h6.588l-0.894,5.783h-5.694v15.944c10.738,-1.457 19.022,-10.638 19.022,-21.775c0,-12.15 -9.85,-22 -22,-22z"></path></g></g>
+                            </svg>
+                        </a>
+    
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50" class="x-link">
+                                <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path>
+                            </svg>
+                        </a>
+    
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48" class="youtube-link">
+                                <path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+                            </svg>
+                        </a>
+    
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0,0,256,256" class="telegram-link">
+                                <g fill="#24a1de" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c12.703,0 23,10.297 23,23c0,12.703 -10.297,23 -23,23c-12.703,0 -23,-10.297 -23,-23c0,-12.703 10.297,-23 23,-23zM32.934,34.375c0.423,-1.298 2.405,-14.234 2.65,-16.783c0.074,-0.772 -0.17,-1.285 -0.648,-1.514c-0.578,-0.278 -1.434,-0.139 -2.427,0.219c-1.362,0.491 -18.774,7.884 -19.78,8.312c-0.954,0.405 -1.856,0.847 -1.856,1.487c0,0.45 0.267,0.703 1.003,0.966c0.766,0.273 2.695,0.858 3.834,1.172c1.097,0.303 2.346,0.04 3.046,-0.395c0.742,-0.461 9.305,-6.191 9.92,-6.693c0.614,-0.502 1.104,0.141 0.602,0.644c-0.502,0.502 -6.38,6.207 -7.155,6.997c-0.941,0.959 -0.273,1.953 0.358,2.351c0.721,0.454 5.906,3.932 6.687,4.49c0.781,0.558 1.573,0.811 2.298,0.811c0.725,0 1.107,-0.955 1.468,-2.064z"></path></g></g>
+                            </svg>
+                        </a>
+    
+                    </div>
+    
+                    <div class="s-b-light">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                          </svg>
+                          
+                    </div>
+                </div>
+    
+                <div class="s-b-search-bar">
+                    <div class="s-b-search-bar-container">
+    
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" hight="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 search-bar-icon pad-mar">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+    
+                        <input type="search" id="search" placeholder="Type And Press Enter" style="height: 20px;">
+    
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="s-b-nav-items">
+                <ul class="s-b-nav-items-ul pad-mar">
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Woman</a></li>
+                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">collection</a></li>
+                </ul>
+            </div>
+    
+        </div>
+
+    </nav>
+    <script src="main.js"></script>
+</body>
+</html>

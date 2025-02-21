@@ -1,0 +1,607 @@
+@font-face{
+    font-family: Galano;
+    src: url(font/galano-grotesque-alt/GalanoGrotesqueAltMedium.otf);
+}
+
+@font-face{
+    font-family: Galanoregular;
+    src: url(font/galano-grotesque-alt/GalanoGrotesqueAltRegular.otf);
+}
+
+@font-face{
+    font-family: GalanoLight;
+    src: url(font/galano-grotesque-alt/GalanoGrotesqueLight.otf);
+}
+
+body{
+    font-family: Galanoregular;
+    background-color: #aaaaaa;
+    overflow-y: scroll;
+}
+
+nav p{
+    color: rgb(51 ,65 ,85);
+}
+
+.pad-mar{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    background-color: white;
+    box-shadow: 5px 0px 1px #aaaaaa;
+}
+
+.navbar-container{
+    margin: 0 128px;
+    padding: 10px 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    margin: 5px;
+}
+
+.inline{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-items li a{
+    text-decoration: none;
+    color: rgb(51 ,65 ,85);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    margin: 0 10px;
+}
+
+.nav-items li a:hover{
+    background-color: rgba(39, 70, 113, 0.084);
+    color: black;
+    border-radius: 50px;
+}
+
+.nav-content li{
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.nav-search-place{
+    padding: 0;
+}
+
+.nav-content li:hover{
+    background-color: rgba(39, 70, 113, 0.084);
+    color: black;
+    border-radius: 50px;
+}
+
+.mini-account{
+    position: absolute;
+    right: 175px;
+    top: 76px;
+    width: 260px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px rgb(223, 223, 223);
+    border-radius: 1rem;
+    animation: mini-animation 1s ease;
+    display: none;
+}
+
+.mini-account-container{
+    padding: 1.75rem 1.5rem 0.5rem 1.5rem;
+}
+
+.person-mini-info{
+    margin-bottom: 20px;
+}
+
+.person-pic img{
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.person-place{
+    font-size: 0.75rem;
+    margin: 7px 0 0 0;
+}
+
+.account-icon-inner{
+    padding: 17px 0;
+    border-top: 1px solid rgba(255, 179, 93, 0.64);
+}
+
+.account-icon-inner svg{
+    color: rgba(51, 65, 85, 0.64);
+}
+
+.account-icon-inner a{
+    padding: 0 5px;
+    text-decoration: none;
+    color: rgb(51 ,65 ,85);
+}
+
+.account-icon-inner a:hover{
+    background-color: rgba(51, 65, 85, 0.234);
+    color: black;
+    border-radius: 12px;
+}
+
+.account-icon-inner a p{
+    margin: 10px 10px;
+    font-size: 15px;
+}
+
+.open-side-bar{
+    margin-top: 10px;
+    display: none;
+}
+.open-side-bar svg{
+    cursor: pointer;
+}
+
+@keyframes mini-animation {
+    0% {
+        top: 85px;
+        opacity: 0;
+    }
+    100% {
+        top: 76px;
+        opacity: 1;
+    }
+}
+.mini-card{
+    width: 448px;
+    position: absolute;
+    right: 130px;
+    top: 76px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px rgb(223, 223, 223);
+    border-radius: 1rem;
+    animation: mini-animation 1s ease;
+    display: none;
+}
+
+.mini-card-container{
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.mini-card-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.m-c-product-details{
+    margin-left: 16px;
+}
+
+.mi-ca-title{
+    font-size: 1.25rem;
+    color: rgb(51 ,65 ,85);
+}
+
+.mi-ca-product-cards{
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 179, 93, 0.64);
+}
+
+.m-c-product-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 6rem;
+    background-color: rgb(241, 245, 249);
+    border-radius: 0.75rem;
+}
+
+.m-c-product-photo img{
+    width: 5rem;
+    height: 6rem;
+}
+
+.m-c-product-info a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.m-c-product-info span{
+    font-size: 14px;
+    font-family: Galanoregular;
+    color: rgba(51, 65, 85, 0.782);
+}
+
+.m-c-product-line{
+    border-left: 1px solid rgb(226, 232, 240);
+    margin: 0 5px;
+}
+
+.m-c-product-price{
+    display: flex;
+    justify-content: center;
+    border: 1.6px solid rgb(34, 197, 94);
+    border-radius: 0.5rem;
+    padding: 3.5px 10px;
+    position: relative;
+    bottom: 4px;
+    color: rgb(34, 197, 94);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.m-c-product-details-container{
+    display: flex;
+    justify-content: space-between;
+    width: 315px;
+    align-items: center;
+}
+.m-c-product-details{
+    height: 96px;
+}
+
+.m-c-product-num-del{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.m-c-product-num-del p{
+    font-size: 1rem;
+    color: rgb(51 ,65 ,85);
+}
+
+.m-c-product-remove-btn{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(2, 133, 199);
+}
+
+.check-link-sec{
+    background-color: rgb(249, 250, 251);
+    padding: 20px;
+}
+
+.c-l-txt-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-l-title{
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(15, 23, 42);
+}
+
+.c-l-text{
+    color: rgb(100, 116, 139);
+    font-size: 14.5px;
+}
+
+.c-l-total{
+    font-weight: 600;
+    color: rgb(15, 23, 42);
+}
+
+.cart-check-button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cart-check-button a{
+    width: 153px;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cart-link{
+
+    color: rgb(51, 65, 85);
+    border: 0.8px solid rgb(243, 243, 243);
+    background-color: #ffffff;
+}
+
+.check-out-link{
+    background-color: rgb(15, 23, 42);
+    color: white;
+}
+
+.search-bar{
+    justify-content: center;
+    position: relative;
+    right: 100px;
+    padding: 15px 30px;
+    background-color: rgb(248, 250, 252);
+    border-radius: 5px;
+    display: none;
+}
+
+.search-bar svg{
+    cursor: pointer;
+
+}
+
+.search-bar input{
+width: 500px;
+padding: 8px 12px;
+margin-left: 6px;
+font-size: 1.1rem;
+background-color: rgb(248, 250, 252);
+border: none;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border: none;
+}
+
+#Search::-webkit-search-cancel-button{
+    position:relative;
+    right:20px;  
+
+    -webkit-appearance: none;
+    height: 0px;
+    width: 0px;
+}
+
+.sidebar{
+    position: absolute;
+    top: 0;
+    width: 448px;
+    height: 100%;
+    padding: 8px 0;
+    background-color: white;
+    display: none;
+}
+
+.sidebar.open {
+    display: block;
+}
+
+.side-bar-container{
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255, 205, 104, 0.833);
+}
+
+.s-b-search-bar{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.s-b-txt{
+    color: rgb(71, 85, 105);
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.s-b-search-bar-container{
+    display: flex;
+    align-items:center;
+    background-color: rgb(248, 250, 252);
+    padding: 15px 14px;
+    border-radius: 10px;
+}
+
+.s-b-search-bar-container input{
+    border: none;
+    width: 355px;
+    background-color: rgb(248, 250, 252);
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-left: 4px;
+}
+
+.s-b-search-bar-container input:focus {
+    outline: none;
+    border: none;
+}
+
+.social-media-list{
+    display: flex;
+    justify-content: left;
+}
+
+.s-b-social a{
+    margin-right: 10px;
+}
+
+.s-b-social-light{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.s-b-light svg{
+    padding:10px 10px;
+    background-color: rgba(243, 243, 243, 0.764);
+    border-radius: 50px;
+}
+
+.s-b-nav-items{
+    padding: 14px 5px;
+    border-bottom: 1px solid rgba(255, 205, 104, 0.833);
+}
+
+.s-b-nav-items li a{
+    width: 100%;
+    text-decoration: none;
+    color: rgb(51 ,65 ,85);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.s-b-nav-items li{
+    padding: 10px 16px;
+    list-style: none;
+    margin-top: 2px;
+}
+.s-b-nav-items li:hover{
+    background-color: rgba(39, 70, 113, 0.084);
+    color: black;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* nav bar responsive style */
+
+@media (max-width: 1180px){
+    .navbar-container{
+        margin: 0 20px;
+    }
+    .mini-card{
+        right: 20px;
+    }
+    .mini-account{
+        right: 65px;
+    }
+}
+
+@media (max-width: 1024px){
+    .mini-card{
+        right: 10px;
+    }
+    .search-bar{
+        right: 20px;
+    }
+}
+
+@media (max-width: 950px){
+    .navbar-container{
+        margin: 0 10px;
+    }
+    .nav-items li a{
+        margin: 0;
+    }
+    .search-bar{
+        right: 0;
+    }
+    .search-bar input{
+        width: 400px;
+    }
+}
+
+@media (max-width: 1300px){
+    .search-bar{
+        right: 20px;
+    }
+    .search-bar input{
+        width: 400px;
+    }
+}
+
+@media (max-width: 769px){
+    .nav-items-div{
+        display: none;
+    }
+    .nav-search-place{
+        display: none;
+    }
+    .navbar-container{
+        margin: 0 63px;
+        padding: 0 16px;
+    }
+
+    @keyframes mini-animation {
+        0% {
+            top: 75px;
+            opacity: 0;
+        }
+        100% {
+            top: 60px;
+            opacity: 1;
+        }
+    }
+    
+    
+    .mini-account{
+        top: 60px;
+        right: 130px;
+    }
+
+    .mini-card{
+        top: 60px;
+        right: 75px;
+    }
+    .logo{
+        margin-top: 10px;
+    }
+    .open-side-bar{
+        margin-bottom: 3px;
+        display: block;
+    }
+    .nav-content{
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 590px){
+    .navbar-container{
+        margin: 0 4px;
+    }
+    .mini-card{
+        right: 20px;
+    }
+    .mini-account{
+        right: 60px;
+    }
+}
+@media (max-width: 425px){
+    .logo img{
+        width: 120px;
+        height: 30px;
+        margin-left: 50px;
+    }
+}
+@media (max-width: 448px){
+    .sidebar{
+        width: 100%;
+    }
+    .s-b-search-bar-container input{
+        width: 260px;
+    }
+
+}
+.close-side-bar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
