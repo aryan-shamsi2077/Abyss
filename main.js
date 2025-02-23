@@ -7,11 +7,12 @@ function miniAccount(){
     if (miniAccountPop.style.display === "none") {
 
         miniAccountPop.style.display = "block";
-    } else {
+    } else {    
         
         miniAccountPop.style.display = "none";
     }
 };
+
 
 function miniCard(){
     let miniCardPop = document.querySelector('.mini-card');
@@ -61,3 +62,13 @@ function openSideBar() {
 function closeSideBar() {
     document.querySelector('.sidebar').classList.remove('open');
 }
+
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+});
