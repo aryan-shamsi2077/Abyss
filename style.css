@@ -1,26 +1,48 @@
 @font-face{
-    font-family: Galano;
-    src: url(font/galano-grotesque-alt/GalanoGrotesqueAltMedium.otf);
+    font-family: Sans-Regular;
+    src: url(font/PT_Serif,Public_Sans,Roboto_Flex/Public_Sans/static/PublicSans-Regular.ttf);
+}
+@font-face{
+    font-family: Sans-SemiBold;
+    src: url(font/PT_Serif,Public_Sans,Roboto_Flex/Public_Sans/static/PublicSans-SemiBold.ttf);
+}
+@font-face{
+    font-family: Sans-Medium;
+    src: url(font/PT_Serif,Public_Sans,Roboto_Flex/Public_Sans/static/PublicSans-Medium.ttf);
 }
 
-@font-face{
-    font-family: Galanoregular;
-    src: url(font/galano-grotesque-alt/GalanoGrotesqueAltRegular.otf);
+:root{
+    --base-color: #aaaaaa;
+    --primary-color: white;
+    --primary-color2: #f1f5f9;
+    --text-color: rgb(51 ,65 ,85);
+    --text-second-color: black;
+    --text-third-color: white;
+    --hover-color: rgba(39, 70, 113, 0.084);
+    --line-color: rgba(255, 179, 93, 0.64); 
+    --price-color: rgb(34, 197, 94); 
 }
 
-@font-face{
-    font-family: GalanoLight;
-    src: url(font/galano-grotesque-alt/GalanoGrotesqueLight.otf);
+.dark-theme{
+    --base-color: #1a1a1a;
+    --primary-color: #1a1a1a;
+    --primary-color2: #f1f5f9;
+    --text-color: white;
+    --text-second-color: white;
+    --hover-color: rgba(255, 255, 255, 0.1);
+    --line-color: rgba(255, 179, 93, 0.64); 
+    --price-color: rgb(34, 197, 94);
 }
 
 body{
-    font-family: Galanoregular;
-    background-color: #aaaaaa;
+    font-family: Sans-SemiBold;
+    background-color: var(--base-color);
     overflow-y: scroll;
+    z-index: 1;
 }
 
 nav p{
-    color: rgb(51 ,65 ,85);
+    color: var(--text-color);
 }
 
 .pad-mar{
@@ -30,14 +52,15 @@ nav p{
 
 nav{
     width: 100%;
-    background-color: white;
-    box-shadow: 5px 0px 1px #aaaaaa;
+    background-color: var(--primary-color);
+    box-shadow: 5px 0px 1px var(--base-color);
+    z-index: 99;
 }
 
 .navbar-container{
     margin: 0 128px;
     padding: 10px 0;
-    background-color: white;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
 }
@@ -54,7 +77,7 @@ nav{
 
 .nav-items li a{
     text-decoration: none;
-    color: rgb(51 ,65 ,85);
+    color: var(--text-color);
     font-size: 16px;
     font-weight: 500;
     padding: 8px 15px;
@@ -62,22 +85,23 @@ nav{
 }
 
 .nav-items li a:hover{
-    background-color: rgba(39, 70, 113, 0.084);
-    color: black;
+    background-color: var(--hover-color);
+    color: var(--text-second-color);
     border-radius: 50px;
 }
 
 .nav-content li{
     padding: 6px 10px;
     cursor: pointer;
+    color: var(--text-color);
 }
 .nav-search-place{
     padding: 0;
 }
 
 .nav-content li:hover{
-    background-color: rgba(39, 70, 113, 0.084);
-    color: black;
+    background-color: var(--hover-color);
+    color: var(--text-third-color);
     border-radius: 50px;
 }
 
@@ -86,8 +110,8 @@ nav{
     right: 175px;
     top: 76px;
     width: 260px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 3px rgb(223, 223, 223);
+    background-color: var(--text-second-color);
+    box-shadow: 0px 0px 3px var(--base-color);
     border-radius: 1rem;
     animation: mini-animation 1s ease;
     display: none;
@@ -113,22 +137,22 @@ nav{
 
 .account-icon-inner{
     padding: 17px 0;
-    border-top: 1px solid rgba(255, 179, 93, 0.64);
+    border-top: 1px solid var(--line-color);
 }
 
 .account-icon-inner svg{
-    color: rgba(51, 65, 85, 0.64);
+    color: var(--text-color);
 }
 
 .account-icon-inner a{
     padding: 0 5px;
     text-decoration: none;
-    color: rgb(51 ,65 ,85);
+    color: var(--text-color);
 }
 
 .account-icon-inner a:hover{
-    background-color: rgba(51, 65, 85, 0.234);
-    color: black;
+    background-color: var(--hover-color);
+    color: var(--text-second-color);
     border-radius: 12px;
 }
 
@@ -143,6 +167,7 @@ nav{
 }
 .open-side-bar svg{
     cursor: pointer;
+    color: var(--text-second-color);
 }
 
 @keyframes mini-animation {
@@ -160,8 +185,8 @@ nav{
     position: absolute;
     right: 130px;
     top: 76px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 3px rgb(223, 223, 223);
+    background-color: var(--text-third-color);
+    box-shadow: 0px 0px 3px var(--base-color);
     border-radius: 1rem;
     animation: mini-animation 1s ease;
     display: none;
@@ -184,13 +209,13 @@ nav{
 
 .mi-ca-title{
     font-size: 1.25rem;
-    color: rgb(51 ,65 ,85);
+    color: var(--text-color);
 }
 
 .mi-ca-product-cards{
     display: flex;
     padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 179, 93, 0.64);
+    border-bottom: 1px solid var(--line-color);
 }
 
 .m-c-product-photo{
@@ -199,7 +224,7 @@ nav{
     align-items: center;
     width: 5rem;
     height: 6rem;
-    background-color: rgb(241, 245, 249);
+    background-color: var(--primary-color2);
     border-radius: 0.75rem;
 }
 
@@ -210,30 +235,29 @@ nav{
 
 .m-c-product-info a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--text-second-color);
     font-size: 16px;
 }
 
 .m-c-product-info span{
     font-size: 14px;
-    font-family: Galanoregular;
-    color: rgba(51, 65, 85, 0.782);
+    color: var(--text-color);
 }
 
 .m-c-product-line{
-    border-left: 1px solid rgb(226, 232, 240);
+    border-left: 1px solid var(--primary-color2);
     margin: 0 5px;
 }
 
 .m-c-product-price{
     display: flex;
     justify-content: center;
-    border: 1.6px solid rgb(34, 197, 94);
+    border: 1.6px solid var(--price-color);
     border-radius: 0.5rem;
     padding: 3.5px 10px;
     position: relative;
     bottom: 4px;
-    color: rgb(34, 197, 94);
+    color: var(--price-color);
     font-size: 14px;
     font-weight: 600;
 }
@@ -261,7 +285,7 @@ nav{
 
 .m-c-product-remove-btn{
     border: none;
-    background-color: white;
+    background-color: var(--primary-color2);
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
@@ -269,7 +293,7 @@ nav{
 }
 
 .check-link-sec{
-    background-color: rgb(249, 250, 251);
+    background-color: var(--primary-color2);
     padding: 20px;
 }
 
@@ -281,7 +305,7 @@ nav{
 .c-l-title{
     font-size: 17px;
     font-weight: 600;
-    color: rgb(15, 23, 42);
+    color: var(--text-color);
 }
 
 .c-l-text{
@@ -291,7 +315,7 @@ nav{
 
 .c-l-total{
     font-weight: 600;
-    color: rgb(15, 23, 42);
+    color: var(--text-color);
 }
 
 .cart-check-button{
@@ -313,14 +337,14 @@ nav{
 
 .cart-link{
 
-    color: rgb(51, 65, 85);
-    border: 0.8px solid rgb(243, 243, 243);
-    background-color: #ffffff;
+    color: var(--text-color);
+    border: 0.8px solid var(--primary-color2);
+    background-color: var(--primary-color);
 }
 
 .check-out-link{
     background-color: rgb(15, 23, 42);
-    color: white;
+    color: var(--primary-color);
 }
 
 .search-bar{
@@ -328,13 +352,14 @@ nav{
     position: relative;
     right: 100px;
     padding: 15px 30px;
-    background-color: rgb(248, 250, 252);
+    background-color: var(--primary-color2);
     border-radius: 5px;
     display: none;
 }
 
 .search-bar svg{
     cursor: pointer;
+    color: var(--text-second-color)
 
 }
 
@@ -343,7 +368,7 @@ width: 500px;
 padding: 8px 12px;
 margin-left: 6px;
 font-size: 1.1rem;
-background-color: rgb(248, 250, 252);
+background-color: var(--primary-color2);
 border: none;
 }
 
@@ -367,7 +392,7 @@ border: none;
     width: 448px;
     height: 100%;
     padding: 8px 0;
-    background-color: white;
+    background-color: var(--primary-color);
     display: none;
 }
 
@@ -377,7 +402,7 @@ border: none;
 
 .side-bar-container{
     padding: 24px 20px;
-    border-bottom: 1px solid rgba(255, 205, 104, 0.833);
+    border-bottom: 1px solid var(--line-color);
 }
 
 .s-b-search-bar{
@@ -395,7 +420,7 @@ border: none;
 .s-b-search-bar-container{
     display: flex;
     align-items:center;
-    background-color: rgb(248, 250, 252);
+    background-color: var(--primary-color2);
     padding: 15px 14px;
     border-radius: 10px;
 }
@@ -403,7 +428,7 @@ border: none;
 .s-b-search-bar-container input{
     border: none;
     width: 355px;
-    background-color: rgb(248, 250, 252);
+    background-color: var(--primary-color2);
     font-size: 16px;
     padding: 8px 12px;
     margin-left: 4px;
@@ -432,19 +457,19 @@ border: none;
 
 .s-b-light svg{
     padding:10px 10px;
-    background-color: rgba(243, 243, 243, 0.764);
+    background-color: var(--base-color);
     border-radius: 50px;
 }
 
 .s-b-nav-items{
     padding: 14px 5px;
-    border-bottom: 1px solid rgba(255, 205, 104, 0.833);
+    border-bottom: 1px solid var(--line-color);
 }
 
 .s-b-nav-items li a{
     width: 100%;
     text-decoration: none;
-    color: rgb(51 ,65 ,85);
+    color: var(--text-color);
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -455,9 +480,15 @@ border: none;
     margin-top: 2px;
 }
 .s-b-nav-items li:hover{
-    background-color: rgba(39, 70, 113, 0.084);
-    color: black;
+    background-color: var(--hover-color);
+    color: var(--hover-color);
     border-radius: 10px;
+}
+
+.close-side-bar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .swiper {
@@ -477,8 +508,9 @@ border: none;
     justify-content: space-between;
     align-items: space;
     margin: 0;
-    background-color: #f5f5f5;
+    background-color: var(--primary-color2);
     padding: 0 40px 80px 40px;
+    display: none;
 }
 
 .s-c-left-side {
@@ -505,7 +537,7 @@ border: none;
 .s-c-left-side button{
     font-size: 16px;
     font-weight: 600;
-    color: white;
+    color: var(--text-third-color);
     background-color: rgb(15, 23, 42);
     padding: 15px 30px;
     border-radius: 50px;
@@ -584,23 +616,29 @@ border: none;
     .nav-items-div{
         display: none;
     }
+
     .nav-search-place{
         display: none;
     }
+    
     .navbar-container{
         margin: 0 63px;
         padding: 0 16px;
     }
+    
     .s-c-right-side img{
         display: none;
     }
+    
     .slider--container{
         display: flex;
         justify-content: center;
     }
+    
     .swiper{
         text-align: center;
     }
+    
     .slider--container{
         padding: 0 0 80px 0;
     }
@@ -615,8 +653,7 @@ border: none;
             opacity: 1;
         }
     }
-    
-    
+     
     .mini-account{
         top: 60px;
         right: 130px;
@@ -626,13 +663,16 @@ border: none;
         top: 60px;
         right: 75px;
     }
+    
     .logo{
         margin-top: 10px;
     }
+    
     .open-side-bar{
         margin-bottom: 3px;
         display: block;
     }
+    
     .nav-content{
         margin-top: 5px;
     }
@@ -695,9 +735,4 @@ border: none;
     .s-c-left-side{
         margin-left: 0;
     }
-}
-.close-side-bar{
-    position: absolute;
-    top: 20px;
-    right: 20px;
 }
